@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LensNest - Discover Images</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header id="siteHeader">
+        <div class="brand">
+            <h1>LensNest</h1>
+            <p>Search, discover, and collect visual inspiration.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>What are you looking for?</h2>
+            <p>Type a topic below and explore beautiful images.</p>
+
+            <form id="searchForm">
+                <label for="searchInput">Search for images</label>
+
+                <div class="search-row">
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Try nature, cities, animals..."
+                    >
+
+                    <button type="submit" id="searchButton">
+                        Search
+                    </button>
+
+                    <button type="button" id="clearButton">
+                        Clear
+                    </button>
+                </div>
+            </form>
+
+            <div class="quick-picks">
+                <span>Quick picks:</span>
+                <button type="button">Nature</button>
+                <button type="button">Cities</button>
+                <button type="button">Animals</button>
+                <button type="button">Space</button>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="results-heading">
+                <h2>Discover</h2>
+                <p id="resultCount">Showing 0 results</p>
+            </div>
+
+            <div id="emptyState">
+                Search to see results here.
+            </div>
+
+            <div id="results"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

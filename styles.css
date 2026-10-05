@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4fbf9;
+    color: #173f3a;
+    line-height: 1.6;
+}
+
+/* Sticky branded header */
+#siteHeader {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #0f766e;
+    color: white;
+    padding: 20px 8%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.brand h1 {
+    font-size: 2rem;
+}
+
+.brand p {
+    color: #d7fffa;
+}
+
+/* Main search area */
+main {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 70px 0 45px;
+}
+
+.hero h2 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+}
+
+.hero > p {
+    margin-bottom: 25px;
+    color: #52716d;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 14px 16px;
+    border: 2px solid #b7d8d2;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+#searchInput:focus {
+    outline: 3px solid #f4a261;
+    border-color: #0f766e;
+}
+
+#searchButton,
+#clearButton {
+    border: none;
+    border-radius: 10px;
+    padding: 0 22px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#searchButton {
+    background: #f4a261;
+    color: #173f3a;
+    font-weight: bold;
+}
+
+#clearButton {
+    background: #dcebe8;
+    color: #173f3a;
+}
+
+#searchButton:hover,
+#clearButton:hover {
+    transform: translateY(-1px);
+}
+
+/* Quick-pick chips */
+.quick-picks {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.quick-picks span {
+    font-weight: bold;
+}
+
+.quick-picks button {
+    border: 1px solid #9bc9c1;
+    background: white;
+    color: #0f766e;
+    padding: 7px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Results */
+.results-section {
+    padding-bottom: 70px;
+}
+
+.results-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.results-heading h2 {
+    font-size: 1.8rem;
+}
+
+#resultCount {
+    color: #66827d;
+}
+
+/* Empty-state message */
+#emptyState {
+    text-align: center;
+    padding: 50px 20px;
+    border: 2px dashed #afd2cc;
+    border-radius: 14px;
+    background: white;
+    color: #66827d;
+    margin-bottom: 25px;
+}
+
+/*
+   Part 2 will add image cards here.
+   The container is intentionally empty in Part 1.
+*/
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Responsive layout */
+@media (max-width: 650px) {
+    #siteHeader {
+        padding: 18px 5%;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .hero {
+        padding-top: 45px;
+    }
+
+    .hero h2 {
+        font-size: 1.9rem;
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    #searchButton,
+    #clearButton {
+        padding: 12px;
+    }
+
+    .results-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
